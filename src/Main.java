@@ -4,7 +4,6 @@ import com.antz.token.Token;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  * @author CasterWx  AntzUhl
