@@ -13,7 +13,7 @@
 
 | vim |
 | -------- |
-| <img src="img/vim.gif"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_vim.gif"> |
 
  ---------
 
@@ -39,8 +39,8 @@
 
 | |
 | ------- |
-| <img src="img/1.png"> |
-| <img src="img/step.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_1.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_step.png"> |
 
 
 #### 2. Token
@@ -50,23 +50,23 @@
 
 | 解析结果 |
 | ------- |
-| <img src="img/3.png"> |
-| <img src="img/2.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_3.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_2.png"> |
 
 Token类中需要对源代码分割成`最小单元`，并解析出`变量类型`，`数值量`，`符号`，`标识符`等
 
 | Token |
 | ------- |
-| <img src="img/4.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_4.png"> |
 | Token中k代表单元含义,lexeme代表其在代码中的内容。kindMap是一个提前预置关系转换符表。在需要添加其他关键字时可以直接在KindMap中添加。 |
-| <img src="img/5.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_5.png"> |
 
 
 词法解析器的实现方法有手工构造法和正则表达式的方法。
 
 | 手工构造法-状态图 |
 | ------- |
-| <img src="img/6.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_6.png"> |
 
 这种方法较为复杂，需要大量的代码，而正则表达式的方法较为便捷。
 
@@ -119,44 +119,45 @@ Token类中需要对源代码分割成`最小单元`，并解析出`变量类型
 
 所以我们可以得到一个下图的匹配规则regexPat。
 
-> <img src="img/7.png">
+> <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_7.png">
 
 `ArrayList<Token> tokens`是词法解析器`Lexer`中已解析的`Token`。
 
 源码source作为参数传入`Lexer`的`add`方法中。
 
-> <img src="img/8.png">
+> <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_8.png">
 
 在创建Token时，单元作为构造函数的参数。同时变量,数字值等单元我们无法通过`KindMap`类来判断k值，所以需要在这里判断。
 
-> <img src="img/9.png">
+> <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_9.png">
 
-> <img src="img/10.png">
+> <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_10.png">
+
 
 | 判断是否是变量类型 |
 | -------- |
-| <img src="img/11.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_11.png"> |
 
 | 判断是否是数值类型 |
 | -------- |
-| <img src="img/12.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_12.png"> |
 
 | 判断是否是字符串类型 |
 | -------- |
-| <img src="img/13.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_13.png"> |
 
 
 ## <span id="ch03">三、效果</span>
 
 | 测试代码 |
 | -------- |
-| <img src="img/14.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_14.png"> |
 
 
 | Token解析 |
 | -------- |
-| <img src="img/15.png"> |
-| <img src="img/16.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_15.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_16.png"> |
 
 将源代码转换为了相应的Token单元，这就是词法解析的主要工作了。
 
@@ -164,4 +165,4 @@ Token类中需要对源代码分割成`最小单元`，并解析出`变量类型
 
 | 效果图 |
 | -------- |
-| <img src="img/17.png"> |
+| <img src="https://www.cnblogs.com/images/cnblogs_com/LexMoon/1391533/o_17.png"> |
