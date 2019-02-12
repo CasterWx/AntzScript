@@ -29,7 +29,9 @@ public class Lexer {
         while (matcher.find()){
             String tokenStr = matcher.group();
             Token token = new Token(tokenStr);
-            tokens.add(token);
+            if(!token.getK().equals("»Ø³µ")){
+                tokens.add(token);
+            }
         }
     }
 }

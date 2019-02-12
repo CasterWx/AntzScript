@@ -1,6 +1,6 @@
 package com.antz.astImp;
 
-import com.antz.ast.ASTMark;
+import com.antz.ast.ASTree;
 import com.antz.token.Token;
 
 /**
@@ -9,12 +9,18 @@ import com.antz.token.Token;
  * @company Henu
  * @create 2019-01-28-19:10
  */
-public class NameImp extends ASTMark {
-    public NameImp(Token token) {
-        super(token);
+public class NameImp extends ASTree {
+    private Token token ;
+
+    public NameImp(Token token){
+        this.token = token ;
     }
 
-    public String name(){
-        return token.getLexeme();
+    public void setToken(Token token) {
+        this.token = token;
+    }
+
+    public Token getToken() {
+        return token;
     }
 }

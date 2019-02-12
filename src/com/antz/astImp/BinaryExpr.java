@@ -1,10 +1,9 @@
 package com.antz.astImp;
 
-import com.antz.ast.ASTMark;
-import com.antz.ast.ASTSymbol;
 import com.antz.ast.ASTree;
+import com.antz.token.Token;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * @author CasterWx  AntzUhl
@@ -12,20 +11,14 @@ import java.util.List;
  * @company Henu
  * @create 2019-01-28-19:10
  */
-public class BinaryExpr extends ASTSymbol {
-    public BinaryExpr(List<ASTree> t){
-        super(t);
+public class BinaryExpr extends ASTree {
+    private ArrayList<ASTree> asTrees ;
+
+    public BinaryExpr(Token token){
+        asTrees = new ArrayList<>() ;
     }
 
-    public ASTree left(){
-        return child(0) ;
-    }
-
-    public String operator(){
-        return ((ASTMark)child(1)).token().getLexeme();
-    }
-
-    public ASTree right(){
-        return child(2) ;
+    public void add(ASTree asTree){
+        asTrees.add(asTree) ;
     }
 }

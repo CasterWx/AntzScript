@@ -13,13 +13,16 @@ public class KindMap {
     public static void init(){
         kindMap.put("while","WHILE");
         kindMap.put("if","IF");
+        kindMap.put("else","ELSE");
+        kindMap.put("elif","ELIF");
         kindMap.put("for","FOR");
         kindMap.put("(","左括号");
         kindMap.put(")","右括号");
         kindMap.put("{","左花括号");
         kindMap.put("}","右花括号");
         kindMap.put(">","大于");
-        kindMap.put("=","等于");
+        kindMap.put("==","等于");
+        kindMap.put("=","赋值");
         kindMap.put("<","小于");
         kindMap.put("<=","小于等于");
         kindMap.put(">=","大于等于");

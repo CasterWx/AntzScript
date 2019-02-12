@@ -15,25 +15,24 @@ import java.util.ArrayList;
  * @create 2019-01-27-7:05
  */
 public class LoadCode {
+    private Lexer lexer = new Lexer();
+    private ArrayList<Token> tokens =  new ArrayList<>();
+
     public LoadCode(String fileName){
         try (FileReader reader = new FileReader(fileName);
              BufferedReader br = new BufferedReader(reader)
         ) {
-            Lexer lexer = new Lexer();
             String source = "";
             while ((source = br.readLine()) != null) {
                 lexer.add(source);
             }
-            ArrayList<Token> tokens =  lexer.getTokens();
-            for (int i=0;i<tokens.size();i++){
-                System.out.print(tokens.get(i).getK()+"("+tokens.get(i).getLexeme()+") ");
-                if (tokens.get(i).getLexeme().length()==0){
-                    System.out.println();
-                }
-//                System.out.println(tokens.get(i).printToken());
-            }
+            tokens = lexer.getTokens() ;
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public ArrayList<Token> getTokens(){
+        return tokens ;
     }
 }

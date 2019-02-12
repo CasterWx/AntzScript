@@ -1,5 +1,8 @@
 package com.antz.token;
 
+import com.antz.ast.ASTree;
+import com.antz.astImp.NumberImp;
+
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,6 +16,7 @@ import java.util.regex.Pattern;
 
 public class Token {
     private String k;
+    private String type ;
     private String lexeme ;
     private static HashMap<String ,String> kindMap = null ;
 
@@ -25,10 +29,13 @@ public class Token {
         this.k = kindMap.get(lexmeStr);
         if (k==null&&isNumber(lexmeStr)){
             this.k = "数字" ;
+            this.type = "number" ;
         }else if (k==null&&isVariable(lexmeStr)){
             this.k = "变量" ;
+            this.type = "name" ;
         }else if (k==null&&isString(lexmeStr)){
             this.k = "字符串" ;
+            this.type = "name" ;
         }else if(k==null&&lexeme.length()==0){
             this.k = "回车" ;
         }
@@ -67,7 +74,8 @@ public class Token {
         return "Token { " +
                 "kind = \"" + k +
                 "\",lexeme = \"" + lexeme +
-                "\"}";
+                "\",type = " + type +
+                " }";
     }
 
     public String getK() {
