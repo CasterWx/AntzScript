@@ -1,5 +1,8 @@
+import com.antz.GrammarParser.Parser;
 import com.antz.load.LoadCode;
-import com.sun.org.apache.xalan.internal.xsltc.runtime.Operators;
+import com.antz.token.Token;
+
+import java.util.ArrayList;
 
 /**
  * @author CasterWx  AntzUhl
@@ -10,6 +13,8 @@ import com.sun.org.apache.xalan.internal.xsltc.runtime.Operators;
 public class Main {
     public static void main(String[] args) {
         LoadCode loadCode = new LoadCode("code.antz") ;
+        ArrayList<Token> tokens = loadCode.getTokens();
+        Parser parser = new Parser(tokens) ;
     }
 }
 /*

@@ -1,5 +1,10 @@
 String str = "i am antzScript" ;
 int i = 10 ;
-while (i<100) {
+while (i<100) {{
     i = i + 1 ;
+}}
+if(j==1){
+    String s = "wang" ;
+}elif(j>=2){
+    String a = "hang" ;
 }
