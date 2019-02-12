@@ -34,6 +34,7 @@ public class Token {
         }
         this.lexeme = lexmeStr ;
     }
+
     private static boolean isVariable(String lexeme){
         Pattern pattern = Pattern.compile("^[A-Z_a-z][A-Z_a-z0-9]*$");
         Matcher matcher = pattern.matcher(lexeme);
@@ -42,6 +43,7 @@ public class Token {
         }
         return false ;
     }
+
     private static boolean isNumber(String lexeme){
         Pattern pattern = Pattern.compile("^([0-9]+)$");
         Matcher matcher = pattern.matcher(lexeme);

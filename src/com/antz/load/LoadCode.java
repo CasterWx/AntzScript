@@ -30,7 +30,6 @@ public class LoadCode {
                 if (tokens.get(i).getLexeme().length()==0){
                     System.out.println();
                 }
-
 //                System.out.println(tokens.get(i).printToken());
             }
         } catch (IOException e) {

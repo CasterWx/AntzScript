@@ -1,4 +1,5 @@
 import com.antz.load.LoadCode;
+import com.sun.org.apache.xalan.internal.xsltc.runtime.Operators;
 
 /**
  * @author CasterWx  AntzUhl
@@ -11,3 +12,17 @@ public class Main {
         LoadCode loadCode = new LoadCode("code.antz") ;
     }
 }
+/*
+(
+        while (i < 10)
+        (
+                    (
+                            if ((i % 2) == 0)
+                                ((even = (even + i)))
+                            else
+                                ((odd = (odd + i)))
+                    )
+                    (i = (i + 1))
+        )
+)
+*/
